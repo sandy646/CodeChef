@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   //cout << "Hello World" << endl; 
+   ios_base::sync_with_stdio(false);
+   int test;
+   cin >> test;
+   
+   while(test--)
+   {
+       int n;
+       cin >> n;
+       int max_speed;
+       cin >> max_speed;
+       n--;
+       int ans =1;
+       for(int i=0;i<n;i++)
+       {
+           int curr_speed;
+           cin>>curr_speed;
+           
+           if(curr_speed < max_speed)
+           {
+               ans++;
+               max_speed = curr_speed;
+           }
+       }
+       cout<<ans<<endl;
+   }
+   
+   return 0;
+}
